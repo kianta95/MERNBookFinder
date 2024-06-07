@@ -26,7 +26,7 @@ const resolvers = {
       const correctPw = await user.isCorrectPassword(password);
 
       if (!correctPw) {
-        throw new AuthenticationError('Invalid Logi');
+        throw new AuthenticationError('Invalid Login');
       }
 
       const token = signToken(user);
